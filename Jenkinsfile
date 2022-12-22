@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('checkout Code / Git') {
       steps {
-        git(url: 'git@github.com:mekhamata/NodeJS-EmptySiteTemplate.git', branch: '/master')
+        git(url: 'git@github.com:mekhamata/NodeJS-EmptySiteTemplate.git', branch: '/master', credentialsId: 'github-ssh', poll: true)
       }
     }
 
