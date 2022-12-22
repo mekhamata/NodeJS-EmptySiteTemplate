@@ -3,10 +3,11 @@ pipeline {
     node {
       label 'fedora_slave'
     }
+  
+  }
   triggers {
   pollSCM '* * * * *'
 }
-  }
   stages {
     stage('checkout Code / Git') {
       steps {
